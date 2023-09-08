@@ -8,11 +8,11 @@ secure();
 include('includes/header.php');
 
 if (isset($_GET['delete'])) {
-    if ($stm = $conn->prepare('DELETE FROM posts where id = ?')) {
+    if ($stm = $conn->prepare('DELETE FROM job where id = ?')) {
         $stm->bind_param('i',  $_GET['delete']);
         $stm->execute();
-        set_message("Post  " . $_GET['delete'] . " has been deleted");
-        header('Location: posts.php');
+        set_message("Job  " . $_GET['delete'] . " has been deleted");
+        header('Location: jobs.php');
         $stm->close();
         die();
     } else {
@@ -20,7 +20,7 @@ if (isset($_GET['delete'])) {
     }
 }
 
-if ($stm = $conn->prepare('SELECT * FROM posts')) {
+if ($stm = $conn->prepare('SELECT * FROM job')) {
     $stm->execute();
 
     $result = $stm->get_result();
@@ -35,13 +35,15 @@ if ($stm = $conn->prepare('SELECT * FROM posts')) {
 ?>
         <div class="container mt-5">
             <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <h1 class="display-4">Posts management</h1>
+                <div class="col-md-8">
+                    <h1 class="display-5 mb-4">Jobs management</h1>
                     <table class="table table-striped table-hover">
                         <tr>
                             <th>Id</th>
                             <th>Title</th>
-                            <th>Content</th>
+                            <th>Salary</th>
+                            <th>Schedule</th>
+                            <th>Date</th>
                             <th>Edit | Delete</th>
 
                         </tr>
@@ -51,9 +53,11 @@ if ($stm = $conn->prepare('SELECT * FROM posts')) {
 
                                 <td><?php echo $record['id']; ?> </td>
                                 <td><?php echo $record['title']; ?> </td>
-                                <td><?php echo $record['content']; ?> </td>
-                                <td><a href="posts_edit.php?id=<?php echo $record['id']; ?>">Edit</a> |
-                                    <a href="posts.php?delete=<?php echo $record['id']; ?>">Delete</a>
+                                <td><?php echo $record['salary']; ?> </td>
+                                <td><?php echo $record['schedule']; ?> </td>
+                                <td><?php echo $record['date']; ?> </td>
+                                <td><a href="jobs_edit.php?id=<?php echo $record['id']; ?>">Edit</a> |
+                                    <a href="jobs.php?delete=<?php echo $record['id']; ?>">Delete</a>
                                 </td>
                             </tr>
 
@@ -63,7 +67,7 @@ if ($stm = $conn->prepare('SELECT * FROM posts')) {
 
                     </table>
 
-                    <a href="posts_add.php"> Add new post</a>
+                    <a href="jobs_add.php"> Add new job</a>
 
                 </div>
 
@@ -74,12 +78,12 @@ if ($stm = $conn->prepare('SELECT * FROM posts')) {
     <?php
     } else {
     ?>
-        <h4 style="margin-top: 20px; margin-left: 20px; color: rgb(46,25,25);">No posts found</h4>
-        <a href="posts_add.php"><button class="add_button" style="background-color: rgb(56,109,192);
+        <h4 style="margin-top: 20px; margin-left: 20px; color: rgb(46,25,25);">No jobs found</h4>
+        <a href="jobs_add.php"><button class="add_button" style="background-color: rgb(56,109,192);
     color: white;
     padding: 10px;
     margin-left: 20px;
-    margin-top: 20px;">Add a new post</button></a>
+    margin-top: 20px;">Add a new job</button></a>
 
 <?php
     }

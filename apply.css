@@ -1,0 +1,379 @@
+:root {
+  --background-color: #141413;
+  --body-color: #f9f9f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+div.left ul li a:hover {
+  color: rgb(255, 0, 0);
+  transition: 0.15s;
+}
+div.left ul li:first-child a:hover {
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+nav {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  border-bottom: 1px solid #5c5c5c;
+}
+div.left h4 {
+  position: relative;
+}
+
+/* div.left h4::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  background-color: white;
+  font-weight: normal;
+  border-radius: 1px;
+  height: 2px;
+  box-sizing: border-box;
+  width: 70px;
+} */
+
+div.left ul {
+  display: flex;
+  /* border: 1px solid red; */
+  margin-left: 40px;
+  align-items: center;
+  gap: 20px;
+}
+div.pataKazi {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+div h1 {
+  margin-right: 40px;
+}
+
+div.left ul li {
+  line-height: 80px;
+}
+
+div.right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-right: 40px;
+}
+
+div.right i {
+  border: 1.5px solid white;
+  border-radius: 100%;
+  padding: 8px;
+}
+
+div.right i:hover {
+  color: var(--background-color);
+  background-color: white;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+div.right div.location i {
+  margin-right: 5px;
+  padding: 6.5px 8px;
+}
+
+.maincontent {
+  width: 500px;
+  border: 2px solid black;
+  color: black;
+  padding: 30px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  margin-top: 70px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.maincontent h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-right: 0px;
+}
+.inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.input-field {
+  width: 400px;
+  padding: 10px 15px;
+  background-color: #f1f1f1;
+  border: 2px solid #f1f1f1;
+  border-radius: 10px;
+}
+
+.form-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 20px;
+}
+.form-footer a {
+  color: rgb(37, 120, 171);
+}
+
+input[type="submit"] {
+  text-align: center;
+  padding: 10px 70px;
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  filter: brightness(0.9);
+  transition: 0.15s;
+}
+
+.input-field:focus {
+  outline: none;
+  border: 2px solid black;
+}
+
+.input-field::placeholder {
+  color: black;
+  font-family: "Poppins";
+}
+
+div.cvUpload {
+  display: flex;
+  flex-direction: column;
+}
+
+div.exp {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 20px;
+}
+
+div.exp #experienceInput {
+  width: 320px;
+  padding: 10px 15px;
+  background-color: #f1f1f1;
+  border: 2px solid #f1f1f1;
+  border-radius: 10px;
+}
+
+.footer {
+  background-color: #141413;
+  /* background-size: 100% 130%; */
+  padding: 30px 30px 10px 30px;
+  /* margin-top: 20px; */
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+  justify-content: space-between;
+}
+.footer-col {
+  width: 25%;
+  padding: 0px 15px;
+  color: #bbbbbb;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -10px;
+  background-color: white;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  line-height: 30px;
+  transition: all 0.3s ease;
+}
+.footer-col ul li p {
+  font-size: 16px;
+  text-transform: capitalize;
+
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  line-height: 30px;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  .row {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 570px) {
+  .footer-col {
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  div.left ul {
+    margin-left: 10px;
+  }
+  div h1 {
+    margin-right: 10px;
+  }
+  div.right {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 750px) {
+  a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 700px) {
+  div.location a {
+    display: none;
+  }
+  div.right {
+    gap: 1px;
+  }
+}
+@media (max-width: 600px) {
+  .maincontent {
+    width: 70%;
+  }
+}
+@media (max-width: 525px) {
+  div.left ul {
+    gap: 10px;
+  }
+  div.exp {
+    justify-content: left;
+    flex-direction: column;
+    gap: 0px;
+  }
+  div.exp span {
+    text-align: left;
+  }
+  .input-field {
+    width: 280px;
+  }
+  div.exp span {
+    width: 310px;
+  }
+  div.exp #experienceInput {
+    width: 310px;
+  }
+  .maincontent h1 {
+    font-size: x-large;
+  }
+}
+@media (max-width: 500px) {
+  div.left .companyName {
+    display: none;
+  }
+  div.left ul {
+    margin-left: 5px;
+  }
+  div.pataKazi {
+    gap: 0px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  div.right i {
+    font-size: 12px;
+  }
+  div.right div.location i {
+    padding: 7.5px 8px;
+    margin-right: 3px;
+  }
+}
+@media (max-width: 400px) {
+  .input-field {
+    width: 240px;
+  }
+  div.exp span {
+    width: 270px;
+  }
+  div.exp #experienceInput {
+    width: 270px;
+  }
+  .maincontent p {
+    font-size: 14px;
+  }
+  .maincontent h1 {
+    font-size: large;
+  }
+}

@@ -16,7 +16,7 @@ if (isset($_POST['uname']) && isset($_POST['pass'])) {
 
     if ($user && password_verify($inputPassword, $user['pass'])) {
         $_SESSION['adminuname'] = $user['uname'];
-        header("Location: posts.php");
+        header("Location: jobs.php");
         die();
     } else {
         header("Location: adminlogin.php?error=1");
