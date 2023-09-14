@@ -87,10 +87,10 @@
         <div class="exp">
           <span for="experience">Experience:</span>
           <select id="experienceInput" name="experience">
-            <option value="one">Less than 1 year</option>
-            <option value="two">2 - 3 years</option>
-            <option value="three">5 - 10 years</option>
-            <option value="four">10+ years</option>
+            <option value="Less Than 1 Year">Less than 1 year</option>
+            <option value="Two to Three Years">2 - 3 years</option>
+            <option value="Five to Ten Years">5 - 10 years</option>
+            <option value="Ten+ Years">10+ years</option>
           </select>
         </div>
         <input type="text" id="qualifications" value="" placeholder="Qualifications" class="input-field" name="qualifications" required />

@@ -79,3 +79,26 @@
   border: 1px solid #e6d0be;
   border-left: 5px solid #d06421;
 }
+
+.whole-content {
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+.whole-content h2 {
+  margin-bottom: 20px;
+}
+.box-content {
+  display: flex;
+  margin-bottom: 15px;
+  gap: 7px;
+}
+.box-content p {
+  font-size: 19px;
+}
+
+@media (max-width: 750px) {
+  .navbar {
+    width: 750px;
+  }
+}
